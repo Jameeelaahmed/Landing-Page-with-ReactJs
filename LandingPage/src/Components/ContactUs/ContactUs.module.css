@@ -3,22 +3,18 @@
     justify-content: center;
     /* align-items: center; */
     margin: 100px 0;
+    background-color: white;
 }
 
 
 .contact_us {
+    margin: 50px 0;
+    background-color: #f1f2f7;
     display: flex;
     justify-content: space-evenly;
-    background-color: white;
     width: 80%;
     border-radius: 15px;
     padding: 30px;
-}
-
-@media (max-width:768px) {
-    .contact_us {
-        flex-direction: column;
-    }
 }
 
 .text {
@@ -34,7 +30,7 @@
 }
 
 .headline {
-    width: 400px;
+    max-width: 400px;
     font-size: 40px;
     font-weight: bold;
 }
@@ -104,4 +100,15 @@
 
 .button:hover {
     background-color: var(--secondary-color);
+}
+
+@media (max-width:768px) {
+    .contact_us {
+        flex-direction: column;
+
+        .form,
+        .text {
+            width: 100%;
+        }
+    }
 }

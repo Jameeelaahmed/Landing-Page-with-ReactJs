@@ -1,0 +1,122 @@
+/* Sidebar.module.css */
+.sidebar {
+    width: 365px;
+    background-color: #f1f2f7;
+    position: fixed;
+    z-index: 1000000000;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar.open {
+    left: 0;
+    /* When the sidebar is open, bring it into view */
+}
+
+.iconn {
+    width: 50px;
+    height: 50px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.logo {
+    margin: 60px 40px;
+}
+
+.text {
+    margin: 20px 40px;
+    color: rgb(165, 164, 164);
+    font-size: 14px;
+}
+
+.icons {
+    display: flex;
+    color: var(--main-color);
+    margin-right: 40px;
+}
+
+.icon_cover {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+
+.icon_cover:first-child:hover {
+    color: white;
+    background-color: #1877f2;
+}
+
+.icon_cover:nth-child(2):hover {
+    color: white;
+    background-color: #1da1f2;
+}
+
+.icon_cover:nth-child(3):hover {
+    color: white;
+    background-color: #ff94e0;
+}
+
+.contact_us {
+    margin: 20px 40px;
+    font-size: 14px;
+}
+
+.contact_us div {
+    display: flex;
+    align-items: center;
+}
+
+.contact_us div .bottom_icon {
+    margin-left: 10px;
+    color: var(--main-color);
+}
+
+
+.list ul {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.list ul li {
+    background-color: white;
+    margin: 10px 0 10px 40px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: rgb(236, 236, 236) 0px 8px 24px;
+}
+
+.list ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.hiddenOnLarge {
+    display: none;
+}
+
+.hiddenOnSmall {
+    display: block;
+}
+
+
+@media (max-width:992px) {
+    .hiddinOnLarge {
+        display: block;
+    }
+
+    .hiddenOnSmall {
+        display: none;
+    }
+}

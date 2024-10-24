@@ -3,7 +3,6 @@ import * as FaIcons from 'react-icons/fa6'
 export default function ContactUs() {
     return (
         <div className={classes.container}>
-
             <div className={classes.contact_us}>
                 <div className={classes.text}>
                     <h4 className={classes.contact}>تواصل معنا</h4>

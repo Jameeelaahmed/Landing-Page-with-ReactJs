@@ -6,12 +6,143 @@
     flex-direction: column;
     justify-content: flex-end;
     /* Push content to the bottom */
+    position: relative;
 }
 
-.landing_page svg {
+@media (min-width: 1200px) {
+    .landing_page::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 240px;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        background-color: #00a6a394;
+        animation: moveDownUp 4s ease-in-out infinite;
+    }
+
+    .landing_page::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 150px;
+        width: 200px;
+        height: 200px;
+        background-color: #00a6a394;
+        animation: moveDownUp 4s ease-in-out infinite, rotateCircle 4s linear infinite;
+
+    }
+
+    @keyframes rotateCircle {
+        0% {
+            transform: rotate(0deg);
+            /* Start with no rotation */
+        }
+
+        100% {
+            transform: rotate(360deg);
+            /* Rotate a full circle */
+        }
+    }
+
+    @keyframes moveDownUp {
+        0% {
+            top: 0;
+            /* Start at the original position */
+        }
+
+        50% {
+            top: 394px;
+            /* Move down by 300px */
+        }
+
+        100% {
+            top: 0;
+            /* Move back to the original position */
+        }
+    }
+
+}
+
+.landing_page>svg {
     position: relative;
     /* Change to absolute if needed */
     bottom: 0;
     width: 100%;
     height: auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    z-index: 1000;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content h1 {
+    margin-bottom: 1rem;
+    max-width: 400px;
+}
+
+.icon {
+    width: 50px;
+}
+
+
+
+.content div button {
+    background-color: white;
+    outline: none;
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    z-index: 10000;
+    position: relative;
+}
+
+.content div button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transition: 0.4s;
+    border-radius: 0px 15px 0px 15px;
+    z-index: -1;
+}
+
+.content div button:hover::before {
+    border-radius: 15px 0px 0px 15px;
+    width: 50%;
+    background-color: var(--main-color);
+}
+
+.content div button::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transition: 0.4s;
+    border-radius: 0px 15px 0px 15px;
+    z-index: -1;
+}
+
+
+.content div button:hover::after {
+    border-radius: 0px 15px 15px 0px;
+    width: 50%;
+    background-color: var(--main-color);
 }
