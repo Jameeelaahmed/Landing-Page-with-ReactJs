@@ -1,0 +1,15 @@
+.WhoWeAre {
+    display: flex;
+    margin-top: 100px;
+    align-items: center;
+    background-color: white;
+    padding: 50px;
+}
+
+.pic {
+    width: 50%;
+}
+
+.container {
+    margin-right: 20px;
+}

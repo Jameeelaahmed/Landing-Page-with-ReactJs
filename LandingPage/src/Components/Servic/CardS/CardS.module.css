@@ -1,0 +1,51 @@
+.card {
+    width: 25%;
+    background-color: white;
+    margin: 10px 20px;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 10px;
+    height: 0;
+    transition: 0.4s;
+}
+
+.card:hover::before {
+    height: 100%;
+    background-color: #00a6a382;
+    border-radius: 10px 0 10px 0;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10px;
+    height: 0;
+    transition: 0.4s;
+}
+
+.card:hover::after {
+    height: 100%;
+    background-color: #00a6a3a2;
+    border-radius: 0px 10px 0px 10px;
+}
+
+
+
+.i {
+    font-size: 40px;
+    color: var(--main-color);
+}
+
+.card h3 {
+    color: var(--secondary-color);
+}

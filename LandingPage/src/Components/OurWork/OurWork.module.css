@@ -1,0 +1,18 @@
+.ourwork {
+    margin-top: 100px;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--main-color);
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* flex: 1; */
+}

@@ -1,0 +1,15 @@
+.services_container {
+    margin-top: 100px;
+}
+
+.services_container>h1,
+.services_container>h4 {
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

@@ -1,0 +1,107 @@
+.container {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    margin: 100px 0;
+}
+
+
+.contact_us {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    width: 80%;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+@media (max-width:768px) {
+    .contact_us {
+        flex-direction: column;
+    }
+}
+
+.text {
+    width: 45%;
+}
+
+.form {
+    width: 45%;
+}
+
+.contact {
+    color: var(--secondary-color);
+}
+
+.headline {
+    width: 400px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.des {
+    font-size: 13px;
+    color: rgb(165, 165, 165);
+}
+
+.sec {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.icon {
+    background-color: var(--main-color);
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.icon .i {
+    color: white;
+}
+
+.input_container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input_container label {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.input_container input,
+.input_container textarea {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--main-color);
+    height: 30px;
+}
+
+.input_container input:focus,
+.input_container textarea:focus {
+    outline: none;
+}
+
+.button {
+    width: 100%;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+}
